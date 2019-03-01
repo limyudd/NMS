@@ -185,7 +185,7 @@ void do_nms_sort(Detection *dets, int total, int classes, float nms_thresh)
 		//}
 	}
 	
-	sort(dets, dets + total, ComparatorIndex());
+	//sort(dets, dets + total, ComparatorIndex());
 }
 
 
@@ -210,8 +210,6 @@ int main()
 	int classId;
 	int index = 0;
 	int detId = 0;
-	freopen("C:\\Users\\PQMSI\\Desktop\\NMS\\test\\large.in", "r", stdin);
-	freopen("C:\\Users\\PQMSI\\Desktop\\NMS\\test\\largeout_sort.txt", "w", stdout);
 
 	while (scanf("%d%f%f%f%f%f", &classId, &score, &x, &y, &w, &h) != EOF) {
 		boxes[index].x = x;
